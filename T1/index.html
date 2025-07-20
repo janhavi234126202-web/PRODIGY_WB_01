@@ -1,0 +1,155 @@
+\<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PRODIGY INFOTECH | Landing Page</title>
+  <style>
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    /* Header/Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: transparent;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      z-index: 1000;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .navbar.scrolled {
+      background-color: #0d1b2a;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #00bcd4;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #00bcd4;
+    }
+
+    /* Hero section */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(to right, #2c3e50, #3498db);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      color: white;
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      color: #f0f0f0;
+      font-size: 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .navbar {
+        padding: 15px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="logo">PRODIGY INFOTECH</div>
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div>
+      <h1>Welcome to Prodigy Infotech</h1>
+      <p>Innovating the future through technology. Explore our services and transform your career with us.</p>
+    </div>
+  </section>
+
+  <!-- Dummy content for scrolling -->
+  <section style="height: 150vh; padding: 100px; background-color: #f7f7f7;" id="about">
+    <h2>About Us</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent efficitur, nisi at convallis tincidunt...</p>
+  </section>
+
+  <section style="height: 100vh; padding: 100px; background-color: #e0e0e0;" id="services">
+    <h2>Our Services</h2>
+    <p>Web Development, AI Solutions, Network Engineering, and more...</p>
+  </section>
+
+  <section style="height: 100vh; padding: 100px; background-color: #d0d0d0;" id="contact">
+    <h2>Contact Us</h2>
+    <p>Reach out to Prodigy Infotech via email or our contact form.</p>
+  </section>
+
+  <!-- JavaScript for scroll interaction -->
+  <script>
+    const navbar = document.getElementById('navbar');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+
+</body>
+</html>
